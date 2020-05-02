@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {GithubIcon,
     FacebookIcon,
+    NaverIcon,
     YoutubeIcon,
     InstaIcon,
     Footer,
@@ -42,12 +43,12 @@ const App = () => {
     const Container = (props) => {
         if(props.state === 'main') {
             return(<><Boxwrapper>
-                <Box Github><GithubIcon /></Box>
-                <Box facebook><FacebookIcon /></Box>
+                <Box Github><a target="_blank"  href='https://github.com/ksw7581'><GithubIcon /></a></Box>
+                <Box Naverblog><a target="_blank"  href='https://blog.naver.com/ksw75811'><NaverIcon /></a></Box>
             </Boxwrapper>
             <Boxwrapper>
-                <Box Youtube><YoutubeIcon /></Box>
-                <Box Instagram><InstaIcon /></Box>
+                <Box Youtube><a target="_blank" href='https://www.youtube.com/channel/UCmFU3f71kg1nonxio47QlGA?view_as=subscriber'><YoutubeIcon /></a></Box>
+                <Box Instagram><a target='_blank' href='https://www.instagram.com/sangwon_d/'> <InstaIcon /></a></Box>
             </Boxwrapper></>);
         } else if(props.state === 'about') {
             return(<About />);
