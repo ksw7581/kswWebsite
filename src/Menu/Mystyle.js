@@ -23,3 +23,7 @@ export const Mainprofile = styled.div`
         margin : 10px 0 10px 0;
     }
 `;
+
+export const BlogWrapper = styled.div`
+    margin : 20px;
+`;
