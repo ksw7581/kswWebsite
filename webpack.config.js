@@ -4,6 +4,11 @@ module.exports = {
     name: 'kswwebsite',
     mode: 'production', //실 서비스 : production
     devtool: 'eval',
+    devServer: {
+        contentBase: path.join(__dirname,"public/dist/"),
+        inline: true,
+        hot: true,
+    },
     resolve: {
         extensions: ['.js', '.jsx'],
     },
