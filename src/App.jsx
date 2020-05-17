@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { parse } from 'node-html-parser';
 import axios from 'axios';
 import {GithubIcon,
     FacebookIcon,
@@ -16,11 +17,20 @@ import {About} from './Menu/About';
 import {Blog} from './Menu/Blog';
 
 const manufacture = (data) => {
-    const posts = [];
-    const cutRawData = data.split('"hide full-text">').splice(1);
-    cutRawData.map(docs => {
-        posts.push(docs.split('</span>')[0]);
-    })
+    let posts = [];
+    const root = parse(data);
+    root.querySelectorAll('.card-contents').map((div) => {
+        const title = div.childNodes[1].childNodes[5];
+        if(title === undefined) {
+            return;
+        } else {
+            posts.push(title.innerHTML);
+        }
+    });
+    //제목, 내용, 게시일자, 썸네일이미지, 해시태그 가지고 오면 됨
+    console.log(posts)
+    // console.log(posts[0].childNodes[1]);
+    // console.log(posts[0].childNodes);
     return posts;
 }
 
