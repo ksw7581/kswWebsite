@@ -5,7 +5,7 @@ module.exports = {
     mode: 'production', //실 서비스 : production
     devtool: 'eval',
     devServer: {
-        contentBase: path.join(__dirname,"public/dist/"),
+        contentBase: path.join(__dirname,"src"),
         inline: true,
         hot: true,
     },

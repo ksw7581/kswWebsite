@@ -27,3 +27,12 @@ export const Mainprofile = styled.div`
 export const BlogWrapper = styled.div`
     margin : 20px;
 `;
+
+export const BlockWrapper = styled.div`
+    height : 200px;
+`;
+
+export const Block = styled.div`
+    height : 40px;
+    outline : 1px solid black;
+`;

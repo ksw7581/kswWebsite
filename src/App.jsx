@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { parse } from 'node-html-parser';
 import axios from 'axios';
-import {GithubIcon,
+import {
+    GithubIcon,
     FacebookIcon,
     NaverIcon,
     YoutubeIcon,
@@ -15,22 +16,25 @@ import {GithubIcon,
     Container} from './AppStyle';
 import {About} from './Menu/About';
 import {Blog} from './Menu/Blog';
+import Board from './Menu/Board';
 
 const manufacture = (data) => {
     let posts = [];
     const root = parse(data);
     root.querySelectorAll('.card-contents').map((div) => {
+        // console.log(div);
         const title = div.childNodes[1].childNodes[5];
+        // const imageSrc = div.childNodes[3].childNodes[1].childNodes[1].rawAttrs;
+        // const hashtag = div.childNodes[5].childNodes[0].childNodes[0].rawText;
         if(title === undefined) {
             return;
         } else {
             posts.push(title.innerHTML);
         }
     });
+    root.querySelectorAll('.metadata').map((div) => {
+    })
     //제목, 내용, 게시일자, 썸네일이미지, 해시태그 가지고 오면 됨
-    console.log(posts)
-    // console.log(posts[0].childNodes[1]);
-    // console.log(posts[0].childNodes);
     return posts;
 }
 
@@ -64,6 +68,8 @@ const App = () => {
             return(<About />);
         } else if(props.state === 'blog') {
             return(<Blog posts={posts}/>);
+        } else if(props.state === 'board') {
+            return(<Board />)
         }
     }
 
@@ -78,6 +84,7 @@ const App = () => {
                 <Ul>
                     <Li onClick = {e => {setMenuState('about');}}>About Me</Li>
                     <Li onClick = {e => {setMenuState('blog');}}>Blog</Li>
+                    <Li onClick = {e => {setMenuState('board');}}>Board</Li>
                 </Ul>
             </nav>
         </Header>
