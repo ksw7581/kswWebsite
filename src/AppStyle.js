@@ -14,7 +14,10 @@ export const Ul = styled.ul`
     display: flex;
     list-style-type: none;
     margin : 10px 0 10px 0;
-    
+    ${this} > a {
+        text-decoration : none;
+        color : black;
+    }
 `;
 
 export const Li = styled.li`
