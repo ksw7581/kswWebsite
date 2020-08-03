@@ -23,6 +23,8 @@
     "node-html-parser": "^1.2.16",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.0",
     "styled-icons": "^10.2.1",
     "styled-media-query": "^2.1.2",

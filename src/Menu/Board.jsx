@@ -1,13 +1,11 @@
 import React, {useState, useCallback, useMemo, useEffect} from 'react';
 import {BlockWrapper, Block} from './Mystyle';
 
-
 const useAudio = () => {
     const [audios] = useState([new Audio('/sounds/1.wav'), new Audio('/sounds/2.wav'), new Audio('/sounds/3.wav'), new Audio('/sounds/4.wav')]);
     const [playing, setPlaying] = useState(false);
 
     const toggle = () => setPlaying(!playing);
-
     const playSnd = (index) => {
         if (index === audios.length)
             return;
@@ -26,7 +24,7 @@ const useAudio = () => {
     return [playing, toggle];
 };
 
-const Board = () => {
+export const Board = () => {
 
     return (
         <BlockWrapper>
@@ -39,5 +37,3 @@ const Board = () => {
         </BlockWrapper>
     );
 };
-
-export default Board;

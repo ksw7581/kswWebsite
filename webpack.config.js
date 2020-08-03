@@ -5,9 +5,10 @@ module.exports = {
     mode: 'production', //실 서비스 : production
     devtool: 'eval',
     devServer: {
-        contentBase: path.join(__dirname,"src"),
-        inline: true,
         hot: true,
+        inline: true,
+        contentBase: path.join(__dirname,"src"),
+        historyApiFallback: true,
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -38,6 +39,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'public/dist'),
-        filename: 'main.js'
+        filename: 'main.js',
+        publicPath: '/',
     },
 }
