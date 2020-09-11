@@ -19,9 +19,11 @@
   "homepage": "https://ksw7581.github.io/kswWebsite/",
   "dependencies": {
     "axios": "^0.19.2",
+    "canvasjs": "^1.8.3",
     "cheerio": "^1.0.0-rc.3",
     "node-html-parser": "^1.2.16",
     "react": "^16.13.1",
+    "react-canvas-js": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",

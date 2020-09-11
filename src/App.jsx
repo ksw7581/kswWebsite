@@ -20,6 +20,7 @@ const App = () => {
             <Route exact path='/kswWebsite' component={Home} />
             <Route path="/about" component={About} />
             <Route path="/blog" component={Blog} />
+            <Route path="/board" component={Board} />
         </Switch>
         <Footer>Copyright © 2020 Kim Sang Won. All right reserved.</Footer>
     </Router>);

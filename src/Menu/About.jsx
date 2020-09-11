@@ -17,9 +17,9 @@ export const About = () => {
                 <div>한성대학교 정보통신 공학과 (2017년 2월 졸업)</div>
                 <div>CMES Application Team (자바스크립트 개발자) (2017.02 ~ 2018.01)</div>
                 <div>FM테크 풀스택 웹 개발자 (2018.05 ~ 2020.04)</div>
+                <div>(현) 다겸 풀스택 웹 개발자 (2018.08 ~ 현재)</div>
                 <div>(현) 생각솜씨 개발 총괄(ReactJS, Styled-Component, Github, Webcrawling)</div>
                 <div>(현) 김상원의 웹페이지 개발 총괄(ReactJS, Styled-Component, NodeJS, MongoDB, AWS)</div>
-                <div>(현) 유튜브 채널 개설 중(기획단계)</div>
             </div>
             <div>
                 <p>포트폴리오</p>
