@@ -119,7 +119,7 @@ export const Box = styled.div`
         
          ${this} > a > div {
             bottom: 0;            
-            height: 4em;
+            height: calc(50% + 1.2rem);
             font-size : 2.4em;
             line-height : 1em;
         }   
