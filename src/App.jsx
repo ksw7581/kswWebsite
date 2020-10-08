@@ -22,7 +22,14 @@ const App = () => {
             <Route path="/blog" component={Blog} />
             <Route path="/board" component={Board} />
         </Switch>
-        <Footer>Copyright © 2020 Kim Sang Won. All right reserved.</Footer>
+        <Footer>
+            <div>
+                Copyright © 2020 Kim Sang Won. All right reserved.
+            </div>
+            <div>
+                Contact to : ksw75811@gmail.com
+            </div>
+            </Footer>
     </Router>);
 }
 
