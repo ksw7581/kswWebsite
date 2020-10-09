@@ -20,12 +20,7 @@ export const Nav = () => {
                 <Link to="/blog">
                     <Li>Blog</Li>
                 </Link>
-                <Link to="/board">
-                    <Li>Board</Li>
-                </Link>
             </Ul>
         </nav>
     </>);
-
 };
-

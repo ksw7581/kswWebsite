@@ -5,10 +5,10 @@ import {
     Header,
 } from './AppStyle';
 import {Nav} from './Menu/Nav';
+import {Blog} from './Menu/Blog';
 import {Home} from './Menu/Home';
 import {About} from './Menu/About';
-import {Blog} from './Menu/Blog';
-import {Board} from './Menu/Board';
+import {SuperChat} from './Menu/SuperChat'
 
 const App = () => {
 
@@ -20,7 +20,7 @@ const App = () => {
             <Route exact path='/kswWebsite' component={Home} />
             <Route path="/about" component={About} />
             <Route path="/blog" component={Blog} />
-            <Route path="/board" component={Board} />
+            <Route path="/chat" component={SuperChat} />
         </Switch>
         <Footer>
             <div>

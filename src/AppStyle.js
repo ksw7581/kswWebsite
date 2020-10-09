@@ -116,7 +116,7 @@ export const Box = styled.div`
         width : 60%;       
         margin : 4em auto;    
         height : 60%;    
-        
+       
          ${this} > a > div {
             bottom: 0;            
             height: calc(50% + 1.2rem);
