@@ -22,7 +22,6 @@ const firestore = firebase.firestore();
 
 export const SuperChat = () => {
     const [user] = useAuthState(auth);
-
     return (<div>
         {user ? <ChatRoom/> : <SignIn/>}
     </div>)
@@ -33,7 +32,6 @@ const SignIn = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider);
     }
-
     return (
         <button onClick={signInWithGoogle}>Sign in with Google</button>
     )

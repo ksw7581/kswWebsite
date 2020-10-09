@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import media from "styled-media-query";
+import {Menu} from '@styled-icons/entypo/Menu';
 import {Github} from '@styled-icons/boxicons-logos/Github';
 import {Youtube} from '@styled-icons/boxicons-logos/Youtube';
 import {Instagram} from '@styled-icons/boxicons-logos/Instagram';
@@ -17,11 +18,23 @@ export const Ul = styled.ul`
     display: flex;
     list-style-type: none;
     margin : 10px 0 10px 0;
+    transition: all .3s ease 0s;
     ${this} > a {
         text-decoration : none;
         color : black;
-    }
+    } 
+    ${media.lessThan('medium')`
+        left : 0;
+        top : 85px;
+        z-index : 10;
+        width : 100vw;
+        position : absolute;
+        line-height : 40px;
+        display : inline-block;
+        opacity : ${props => props.menuon ? '0' : '1'};
+    `}
 `;
+
 
 export const Li = styled.li`
     color : white;
@@ -30,11 +43,39 @@ export const Li = styled.li`
     padding : 10px 20px 10px 20px;
     border-radius : 5px;
     transition: all .3s ease 0s;
+    box-sizing : border-box;
     &:hover {
         background-color : white;
         color : #82bb00;
     }
+    ${media.lessThan('medium')`
+        margin : 5px 0;
+        background-color : #2ecc71;
+    `}
 `;
+
+export const Logo = styled.div`
+    ${media.lessThan('medium')`
+        margin : auto;
+    `}
+`;
+
+
+export const Menuicon = styled(Menu)`
+  ${media.lessThan('medium')`
+    top : 20px;
+    right : 20px;
+    width : 40px;
+    height : 40px;
+    position : absolute;
+    cursor : pointer;
+    color : white;
+  `}
+  width : 0px;
+  height : 0px;
+  cursor : pointer;
+`
+
 
 export const Container = styled.div`
     margin: auto;   
