@@ -21,10 +21,10 @@ export const Nav = () => {
         <nav style={{display : 'relative',}}>
             <Ul menuon={menuon}>
                 <Link to="/about">
-                    <Li>About Me</Li>
+                    <Li onClick={() => setMenuon(true)}>About Me</Li>
                 </Link>
                 <Link to="/blog">
-                    <Li>Blog</Li>
+                    <Li onClick={() => setMenuon(true)}>Blog</Li>
                 </Link>
             </Ul>
         </nav>

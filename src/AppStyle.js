@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import media from "styled-media-query";
 import {Menu} from '@styled-icons/entypo/Menu';
@@ -31,7 +30,7 @@ export const Ul = styled.ul`
         position : absolute;
         line-height : 40px;
         display : inline-block;
-        opacity : ${props => props.menuon ? '0' : '1'};
+        opacity : ${props => props.menuon === true ? '0' : '1'};
     `}
 `;
 
