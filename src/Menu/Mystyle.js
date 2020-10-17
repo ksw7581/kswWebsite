@@ -6,7 +6,7 @@ export const Myprofile = styled.section`
     padding: 80px 0 80px;
     margin: auto;
     text-align: center;
-    color: #fff;
+    color: black;
     background: url('../images/mainimage.jpg') no-repeat 50% 0% fixed;
     background-size: 100vw;
     
@@ -35,7 +35,7 @@ export const Mainprofile = styled.section`
         background: url('../images/aboutimage2.jpg') no-repeat 50% fixed;
         background-size: cover !important;
         padding: 60px 100px; 60px;
-        color : white;
+        color : black;
     }
      
     ${this} > div {
