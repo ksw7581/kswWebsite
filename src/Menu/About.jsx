@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Myprofile, Mainprofile} from './Mystyle';
 
 export const About = ({mode}) => {
+
+    const [lang, setLang] = useState('Eng');
+
     return (<div>
         <Myprofile mode={mode}>
             <div>김상원 1991년 7월 18일 생</div>
@@ -15,7 +18,7 @@ export const About = ({mode}) => {
                 <div>FM테크 풀스택 웹 개발자 (2018.05 ~ 2020.04)</div>
                 <div>(현) 다겸 풀스택 웹 개발자 (2020.08 ~ 현재)</div>
                 <div>(현) 생각솜씨 개발 총괄(ReactJS, Styled-Component, Github, Webcrawling)</div>
-                <div>(현) 김상원의 웹페이지 개발 총괄(ReactJS, Styled-Component, NodeJS, MongoDB, AWS)</div>
+                <div>(현) 김상원의 웹페이지 개발 총괄(ReactJS, Styled-Component, Firebase)</div>
             </div>
         </Mainprofile>
         <Mainprofile mode={mode}>
@@ -55,7 +58,8 @@ export const About = ({mode}) => {
                 </div>
                 <div>
                     완벽주의적 성격을 가지고 있습니다. 제 개인적으로는 장점이라고 생각하는데. 타인이 보기에는 작업속도가 느리게 보일 수 있어보게되고,
-                    고민만 하는 모습처럼 보게 되어서 걱정을 하게 됩니다.
+                    고민만 하는 모습처럼 보게 되어서 걱정을 하게 됩니다. 하지만 여럿 사람들이 하는 일을 저 혼자 한다는 것은 제게 있어서 큰 장점이라고 생각합니다.
+                    혼자서 개발의 전체 분야를 맡아서 홈페이지 개발을 하고 있고 향후에도 계속 지금과 같은 생각을 가질 것 같습니다.
                 </div>
                 <p>제가 가진 지향점</p>
                 <div>
