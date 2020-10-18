@@ -12,6 +12,7 @@ import {SuperChat} from './Menu/SuperChat'
 
 const App = () => {
 
+    console.log(location.pathname);
 
     return (<Router>
         <Header>
