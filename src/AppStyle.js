@@ -77,9 +77,8 @@ export const Menuicon = styled(Menu)`
 
 
 export const Container = styled.div`
-    margin: auto;   
-    background-size: cover;
-    background: url('/images/mainImage.jpg') no-repeat 50% 0 fixed;
+    margin: auto;      
+    background: ${props => props.mode === 'development' ?  `url('/images/mainImage.jpg') no-repeat 50% 0 fixed;` : `url('https://raw.githubusercontent.com/ksw7581/kswWebsite/master/images/mainImage.jpg') no-repeat 50% 0 fixed;`};
     ${media.lessThan("medium")`
     /* screen width is less than 768px (medium) */
         width : 100vw;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {
     Footer,
     Header,
@@ -10,19 +10,21 @@ import {Home} from './Menu/Home';
 import {About} from './Menu/About';
 import {SuperChat} from './Menu/SuperChat'
 
-const App = () => {
+let mode = '';
+location.hostname === 'localhost' ? mode = 'development' : mode = 'production';
 
-    console.log(location.pathname);
+const App = () => {
 
     return (<Router>
         <Header>
-            <Nav />
+            <Nav/>
         </Header>
         <Switch>
-            <Route exact path='/kswWebsite' component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/chat" component={SuperChat} />
+            <Route exact path='/kswWebsite'
+                   render={() => <Home mode={mode}/>}/>
+            <Route path="/about" component={About}/>
+            <Route path="/blog" component={Blog}/>
+            <Route path="/chat" component={SuperChat}/>
         </Switch>
         <Footer>
             <div>
@@ -31,7 +33,7 @@ const App = () => {
             <div>
                 Contact to : ksw75811@gmail.com
             </div>
-            </Footer>
+        </Footer>
     </Router>);
 }
 

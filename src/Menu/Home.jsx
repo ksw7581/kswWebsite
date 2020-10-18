@@ -1,8 +1,8 @@
 import React from 'react';
 import {Box, Boxwrapper, Container, GithubIcon, InstaIcon, LinkedinIcon, YoutubeIcon} from "../AppStyle";
 
-export const Home = () => {
-    return (<Container>
+export const Home = ({mode}) => {
+    return (<Container mode={mode}>
         <Boxwrapper>
             <Box Instagram><a target='_blank' href='https://www.instagram.com/sangwon_d/'>
                 <InstaIcon/>
