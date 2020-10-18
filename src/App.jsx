@@ -22,7 +22,9 @@ const App = () => {
         <Switch>
             <Route exact path='/kswWebsite'
                    render={() => <Home mode={mode}/>}/>
-            <Route path="/about" component={About}/>
+            <Route path="/about"
+                    render={() => <About mode={mode} />}
+            />
             <Route path="/blog" component={Blog}/>
             <Route path="/chat" component={SuperChat}/>
         </Switch>

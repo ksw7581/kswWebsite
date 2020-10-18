@@ -6,8 +6,8 @@ export const Myprofile = styled.section`
     padding: 80px 0 80px;
     margin: auto;
     text-align: center;
-    color: black;
-    background: url('../images/mainimage.jpg') no-repeat 50% 0% fixed;
+    color: black;    
+    background: ${props => props.mode === 'development' ?  `url('/images/mainImage.jpg') no-repeat 50% 0 fixed;` : `url('https://raw.githubusercontent.com/ksw7581/kswWebsite/master/images/mainImage.jpg') no-repeat 50% 0 fixed;`};
     background-size: 100vw;
     
     ${this} > div:nth-child(1) {        
@@ -31,11 +31,11 @@ export const Mainprofile = styled.section`
     background-size: cover;
     background-attachment: scroll;
     
-    ${this} > div:nth-child(1) {          
-        background: url('../images/aboutimage2.jpg') no-repeat 50% fixed;
+    ${this} > div:nth-child(1) {
+        background: ${props => props.mode === 'development' ?  `url('../images/aboutimage2.jpg') no-repeat 50% fixed;` : `url('https://raw.githubusercontent.com/ksw7581/kswWebsite/master/images/aboutimage2.jpg') no-repeat 50% 0 fixed;`};          
         background-size: cover !important;
         padding: 60px 100px; 60px;
-        color : black;
+        color : white;
     }
      
     ${this} > div {

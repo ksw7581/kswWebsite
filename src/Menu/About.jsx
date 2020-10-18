@@ -1,13 +1,13 @@
 import React from 'react'
 import {Myprofile, Mainprofile} from './Mystyle';
 
-export const About = () => {
+export const About = ({mode}) => {
     return (<div>
-        <Myprofile>
+        <Myprofile mode={mode}>
             <div>김상원 1991년 7월 18일 생</div>
             <div>모든 현상의 근원에 대해서 철학적으로 접근하는 개발자가 되고자 합니다.</div>
         </Myprofile>
-        <Mainprofile>
+        <Mainprofile mode={mode}>
             <div>
                 <p>주요 약력</p>
                 <div>한성대학교 정보통신 공학과 (2017년 2월 졸업)</div>
@@ -18,7 +18,7 @@ export const About = () => {
                 <div>(현) 김상원의 웹페이지 개발 총괄(ReactJS, Styled-Component, NodeJS, MongoDB, AWS)</div>
             </div>
         </Mainprofile>
-        <Mainprofile>
+        <Mainprofile mode={mode}>
             <div>
                 <p>포트폴리오</p>
                 <div>Reverse Escape 방탈출 카페 홈페이지 개발 (퍼블리싱, 프론트엔드, 백엔드) (2018.12)</div>
@@ -34,13 +34,13 @@ export const About = () => {
                 <div>홈페이지 : <a target="_blank" href='http://15.165.13.245/'>http://15.165.13.245/</a></div>
             </div>
         </Mainprofile>
-        <Mainprofile>
+        <Mainprofile mode={mode}>
             <div>
                 <p>주요 키워드</p>
                 <div>Html, Css, Javascript, Jquery, React, NodeJS, MongoDB, Git, AWS</div>
             </div>
         </Mainprofile>
-        <Mainprofile>
+        <Mainprofile mode={mode}>
             <div>
                 <p>제가 가진 강점</p>
                 <div>
@@ -65,7 +65,7 @@ export const About = () => {
                 </div>
             </div>
         </Mainprofile>
-        <Mainprofile>
+        <Mainprofile mode={mode}>
             <div>
                 <div>1. 웹페이지 개발이 필요하신 분 (HTML, CSS, React, NodeJS, MongoDB) 기반의 웹페이지</div>
                 <div>2. 웹페이지 유지보수가 필요하신 분 (개발 언어 필요 없음)</div>

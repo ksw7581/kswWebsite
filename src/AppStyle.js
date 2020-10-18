@@ -30,7 +30,7 @@ export const Ul = styled.ul`
         position : absolute;
         line-height : 40px;
         display : inline-block;
-        opacity : ${props => props.menuon === true ? '0' : '1'};
+        opacity : ${props => props.menuon === true ? '1' : '0'};
     `}
 `;
 
