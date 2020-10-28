@@ -54,18 +54,44 @@ export const Mainprofile = styled.section`
 `;
 
 export const BlogWrapper = styled.div`
-    width : calc(100% - 40px);
-    margin : 20px;
+    padding : 20px;
     display : inline-block;
+    width : calc(100% - 40px);
+    background-color : #ecf0f1;
     ${this} > div {
         margin : 5px 10px;
-        width : calc(25% - 20px);
-        height : 300px;
+        height : 270px;
+        cursor : pointer;
         display : inline-block;
+        width : calc(25% - 20px);
+        transition: all .3s ease 0s;
+        box-sizing : border-box;
+        &:hover {
+           filter : blur(5px);
+        }
+        
+         ${this} > div:nth-child(1) {
+            height : 250px;
+            ${media.lessThan("medium")`
+                height : 100%;
+            `}
+         }
         
         ${this} > div:nth-child(1) > img {
            margin : 3px;
            width : calc(100% - 6px);
+           height : calc(100% - 6px);
+           border-radius : 5px;
+          
+        }
+        
+        ${this} > div:nth-child(2) > div {
+           font-size : 24px;
+           font-weight : 600;
+           overflow: hidden;
+           color : #27ae60;
+           text-overflow: ellipsis;
+           white-space: nowrap;
         }
         
         ${media.between("medium", "large")`
@@ -76,6 +102,7 @@ export const BlogWrapper = styled.div`
         ${media.lessThan("medium")`
             margin : 1em 2em;
             width : calc(100% - 4em);
+            height : 100%;
         `}
     }
     

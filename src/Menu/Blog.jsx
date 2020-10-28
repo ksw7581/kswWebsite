@@ -10,7 +10,7 @@ const BlogDummy = [{
 },{
     title : 'Lorem Ipsum',
     contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    mainImg : 'https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
     id : 'o5s6ZydXXUcxgEPXYUFjb'
 },{
     title : 'Lorem Ipsum',
@@ -20,7 +20,7 @@ const BlogDummy = [{
 },{
     title : 'Lorem Ipsum',
     contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    mainImg : 'https://images.unsplash.com/photo-1603864133490-83c0f55a80d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
     id : 'o5s6ZydXXUcxgEPXYUFjd'
 },{
     title : 'Lorem Ipsum',
@@ -50,6 +50,8 @@ export const Blog = ({
     if (blogs === undefined) {
         return (<></>);
     }
+
+    console.log(blogs);
 
     // comment: "댓글"
     // content: "내용"
