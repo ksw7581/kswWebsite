@@ -18,7 +18,7 @@ export const Nav = () => {
                 </svg>
             </Link>
         </Logo>
-        <nav style={{display : 'relative',}}>
+        <nav style={{display: 'relative',}}>
             <Ul menuon={menuon}>
                 <Link to="/about">
                     <Li onClick={() => setMenuon(true)}>About Me</Li>

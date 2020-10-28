@@ -4,7 +4,7 @@ import {Box, Boxwrapper, Container, GithubIcon, InstaIcon, LinkedinIcon, Youtube
 export const Home = ({mode}) => {
     return (<Container mode={mode}>
         <Boxwrapper>
-            <Box Instagram><a target='_blank' href='https://www.instagram.com/sangwon_d/'>
+            <Box Instagram><a target='_blank' href='https://www.instagram.com/sangwon_f/'>
                 <InstaIcon/>
                 <div>My Instagram</div>
             </a></Box>

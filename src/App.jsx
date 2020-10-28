@@ -10,23 +10,56 @@ import {Home} from './Menu/Home';
 import {About} from './Menu/About';
 import {SuperChat} from './Menu/SuperChat'
 
+import firebase from "firebase/app";
+import 'firebase/firestore';
+import 'firebase/auth';
+
+import {useAuthState} from "react-firebase-hooks/auth";
+import {useCollectionData} from "react-firebase-hooks/firestore";
+
+firebase.initializeApp({
+    apiKey: "AIzaSyCPrbWsdj2I5inDtPP43v9yfDxSFdwOH5w",
+    authDomain: "kswwebsite-47f2d.firebaseapp.com",
+    databaseURL: "https://kswwebsite-47f2d.firebaseio.com",
+    projectId: "kswwebsite-47f2d",
+    storageBucket: "kswwebsite-47f2d.appspot.com",
+    messagingSenderId: "785027672767",
+    appId: "1:785027672767:web:32b8487bada87479a4f40a",
+    measurementId: "G-WKC6EC5JRV"
+});
+
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+
 let mode = '';
 location.hostname === 'localhost' ? mode = 'development' : mode = 'production';
 
 const App = () => {
 
-    return (<Router>
+    return (<Router basename={'/kswWebsite'}>
         <Header>
             <Nav/>
         </Header>
         <Switch>
-            <Route exact path='/kswWebsite'
+            <Route exact path='/'
                    render={() => <Home mode={mode}/>}/>
             <Route path="/about"
-                    render={() => <About mode={mode} />}
+                   render={() => <About mode={mode}/>}
             />
-            <Route path="/blog" component={Blog}/>
-            <Route path="/chat" component={SuperChat}/>
+            <Route path="/blog"
+                   render={() => <Blog
+                       firestore={firestore}
+                       useCollectionData={useCollectionData}
+                   />}
+            />
+            <Route path="/chat"
+                   render={() => <SuperChat
+                       auth={auth}
+                       firebase={firebase}
+                       firestore={firestore}
+                       useAuthState={useAuthState}
+                       useCollectionData={useCollectionData}
+                   />}/>
         </Switch>
         <Footer>
             <div>

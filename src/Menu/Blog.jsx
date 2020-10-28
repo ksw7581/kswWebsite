@@ -1,46 +1,73 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import { parse } from 'node-html-parser';
+import React from 'react';
 import {BlogWrapper} from './Mystyle';
 
 
-const manufacture = (data) => {
-  let posts = [];
-  const root = parse(data);
-  root.querySelectorAll('.card-contents').map((div) => {
-    // console.log(div);
-    const title = div.childNodes[1].childNodes[5];
-    // const imageSrc = div.childNodes[3].childNodes[1].childNodes[1].rawAttrs;
-    // const hashtag = div.childNodes[5].childNodes[0].childNodes[0].rawText;
-    if(title === undefined) {
-      return;
-    } else {
-      posts.push(title.innerHTML);
+const BlogDummy = [{
+    title : 'Lorem Ipsum',
+    contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    id : 'o5s6ZydXXUcxgEPXYUFja'
+},{
+    title : 'Lorem Ipsum',
+    contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    id : 'o5s6ZydXXUcxgEPXYUFjb'
+},{
+    title : 'Lorem Ipsum',
+    contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    id : 'o5s6ZydXXUcxgEPXYUFjc'
+},{
+    title : 'Lorem Ipsum',
+    contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    id : 'o5s6ZydXXUcxgEPXYUFjd'
+},{
+    title : 'Lorem Ipsum',
+    contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    id : 'o5s6ZydXXUcxgEPXYUFje'
+},{
+    title : 'Lorem Ipsum',
+    contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    id : 'o5s6ZydXXUcxgEPXYUFjf'
+},{
+    title : 'Lorem Ipsum',
+    contents : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    mainImg : 'https://images.unsplash.com/photo-1593642634524-b40b5baae6bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80',
+    id : 'o5s6ZydXXUcxgEPXYUFjg'
+}];
+
+export const Blog = ({
+                         firestore,
+                         useCollectionData,
+                     }) => {
+
+    const blogRef = firestore.collection('blogs');
+    const query = blogRef.orderBy('registerDate');
+    const [blogs] = useCollectionData(query, {idField: 'id'});
+    if (blogs === undefined) {
+        return (<></>);
     }
-  });
-  root.querySelectorAll('.metadata').map((div) => {
-  })
-  //제목, 내용, 게시일자, 썸네일이미지, 해시태그 가지고 오면 됨
-  return posts;
-}
 
-export const Blog = () => {
+    // comment: "댓글"
+    // content: "내용"
+    // id: "o5s6ZydXXUcxgEPXYUFj"
+    // mainImg: "메인 이미지"
+    // registerDate: Object { seconds: 1602169200, nanoseconds: 0 }
+    // title: "제목"
 
-  const [posts, setPosts] = useState([]);
-
-  useEffect(
-      () => {
-        axios({
-            method : 'GET',
-            url : 'https://www.rocketpunch.com/@b00b23e820f041a1/posts',
-        }).then( res => {
-            setPosts(manufacture(res.data))
-        }).catch( response => { console.log(response); });
-      },
-      []
-  );
-
-  return(posts.map((docs, index) => {
-    return(<BlogWrapper key={index}>{docs}</BlogWrapper>);
-  }))
+    return (<BlogWrapper>{
+        BlogDummy.map((blog) => {
+            return (<div key={blog.id}>
+                <div>
+                    <img src = {blog.mainImg} />
+                </div>
+                <div>
+                    <div>{blog.title}</div>
+                </div>
+            </div>)
+        })
+    }</BlogWrapper>);
 };
