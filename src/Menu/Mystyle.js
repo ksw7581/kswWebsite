@@ -54,7 +54,31 @@ export const Mainprofile = styled.section`
 `;
 
 export const BlogWrapper = styled.div`
+    width : calc(100% - 40px);
     margin : 20px;
+    display : inline-block;
+    ${this} > div {
+        margin : 5px 10px;
+        width : calc(25% - 20px);
+        height : 300px;
+        display : inline-block;
+        
+        ${this} > div:nth-child(1) > img {
+           margin : 3px;
+           width : calc(100% - 6px);
+        }
+        
+        ${media.between("medium", "large")`
+            margin : 5px 10px;
+            width : calc(50% - 40px);
+    `   }
+        
+        ${media.lessThan("medium")`
+            margin : 1em 2em;
+            width : calc(100% - 4em);
+        `}
+    }
+    
 `;
 
 export const BlockWrapper = styled.div`
