@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState}from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {
     Footer,
@@ -9,6 +9,7 @@ import {Blog} from './Menu/Blog';
 import {Home} from './Menu/Home';
 import {About} from './Menu/About';
 import {SuperChat} from './Menu/SuperChat'
+import {BlogContent} from "./Menu/BlogContent";
 
 import firebase from "firebase/app";
 import 'firebase/firestore';
@@ -36,6 +37,8 @@ location.hostname === 'localhost' ? mode = 'development' : mode = 'production';
 
 const App = () => {
 
+    const [blogContent, setBlogContent] = useState({});
+
     return (<Router basename={'/kswWebsite'}>
         <Header>
             <Nav/>
@@ -46,10 +49,18 @@ const App = () => {
             <Route path="/about"
                    render={() => <About mode={mode}/>}
             />
-            <Route path="/blog"
+            <Route path="/blogs"
                    render={() => <Blog
                        firestore={firestore}
                        useCollectionData={useCollectionData}
+                       setBlogContent={setBlogContent}
+                   />}
+            />
+            <Route path="/blog/:id"
+                   render={() => <BlogContent
+                       firestore={firestore}
+                       useCollectionData={useCollectionData}
+                       Blog={blogContent}
                    />}
             />
             <Route path="/chat"

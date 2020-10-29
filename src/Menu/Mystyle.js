@@ -58,6 +58,11 @@ export const BlogWrapper = styled.div`
     display : inline-block;
     width : calc(100% - 40px);
     background-color : #ecf0f1;
+    
+    ${this} a {
+        text-decoration : none;
+    }
+    
     ${this} > div {
         margin : 5px 10px;
         height : 270px;
@@ -70,6 +75,7 @@ export const BlogWrapper = styled.div`
            filter : blur(5px);
         }
         
+        
          ${this} > div:nth-child(1) {
             height : 250px;
             ${media.lessThan("medium")`
@@ -77,7 +83,7 @@ export const BlogWrapper = styled.div`
             `}
          }
         
-        ${this} > div:nth-child(1) > img {
+        ${this} > div:nth-child(1) > a > img {
            margin : 3px;
            width : calc(100% - 6px);
            height : calc(100% - 6px);
@@ -85,7 +91,7 @@ export const BlogWrapper = styled.div`
           
         }
         
-        ${this} > div:nth-child(2) > div {
+        ${this} > div:nth-child(2) > a >  div {
            font-size : 24px;
            font-weight : 600;
            overflow: hidden;
@@ -105,7 +111,48 @@ export const BlogWrapper = styled.div`
             height : 100%;
         `}
     }
+   
+`;
+
+export const BlogCtntWrapper = styled.div`
+    padding : 20px;
+    width : calc(100% - 40px);
+    background-color : #ecf0f1;
+    ${this} > div:nth-child(1) > div {
+        margin : 10px 50px;
+        width : calc(100% - 100px);
+        font-size : 32px;
+        color : #27ae60;
+         
+        ${this} > div {
+            font-size : 18px;            
+        }
+        ${media.lessThan("medium")`
+            margin : 0.4em 1em;
+            width : calc(100% - 2em);
+            font-size : 2.4em;
+        `} 
+    }
+     
+    ${this} > div:nth-child(2) > img {
+        margin : 15px 50px;
+        width : calc(100% - 100px);
+        ${media.lessThan("medium")`
+            margin : 0.5em 2em;
+            width : calc(100% - 4em);
+        `}
+    }
     
+    ${this} > div:nth-child(3) > div {
+        margin : 10px 50px;
+        width : calc(100% - 100px);
+        font-size : 18px;
+        ${media.lessThan("medium")`
+            margin : 0.4em 1em;
+            width : calc(100% - 2em);
+            font-size : 1.4em;
+        `} 
+    } 
 `;
 
 export const BlockWrapper = styled.div`
