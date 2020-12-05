@@ -27,5 +27,4 @@ export const Home = ({mode}) => {
             </a></Box>
         </Boxwrapper>
     </Container>);
-
 };

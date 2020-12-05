@@ -19,12 +19,12 @@ export const Nav = () => {
             </Link>
         </Logo>
         <nav style={{display: 'relative',}}>
-            <Ul menuon={menuon}>
+            <Ul>
                 <Link to="/about">
-                    <Li onClick={() => setMenuon(false)}>About Me</Li>
+                    <Li menuon={menuon} onClick={() => setMenuon(false)}>About Me</Li>
                 </Link>
                 <Link to="/blogs">
-                    <Li onClick={() => setMenuon(false)}>Blog</Li>
+                    <Li menuon={menuon} onClick={() => setMenuon(false)}>Blog</Li>
                 </Link>
             </Ul>
         </nav>
