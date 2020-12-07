@@ -38,12 +38,12 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   color: white;
   cursor: pointer;
-  font-size: ${props => props.menuon === true ? 'x-large' : '0'};
-  padding: ${props => props.menuon === true ? '10px 20px 10px 20px' : '0'};
+  font-size: x-large;
+  padding: 10px 20px;
   border-radius: 5px;
   transition: all .3s ease 0s;
   box-sizing: border-box;
-  opacity: ${props => props.menuon === true ? '1' : '0'};
+  
   &:hover {
     background-color: white;
     color: #82bb00;
@@ -52,6 +52,9 @@ export const Li = styled.li`
   ${media.lessThan('medium')`
         margin : 5px 0;
         background-color : #2ecc71;
+        font-size: ${props => props.menuon === true ? 'x-large' : '0'};
+        padding: ${props => props.menuon === true ? '10px 20px 10px 20px' : '0'};
+        opacity: ${props => props.menuon === true ? '1' : '0'};
     `}
 `;
 

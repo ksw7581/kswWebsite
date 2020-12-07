@@ -21,10 +21,10 @@ export const Blog = ({
             return (<div key={blog.id}>
                 <div>
                     <Link to={"/blog/" + blog.id} onClick={() => {
-                        console.log('setState');
-                        setBlogContent(blog)}
+                        setBlogContent(blog)
+                    }
                     }>
-                        <img src = {blog.mainImg} />
+                        <img src={blog.mainImg}/>
                     </Link>
                 </div>
                 <div>

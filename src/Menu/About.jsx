@@ -8,7 +8,7 @@ export const About = ({mode}) => {
     return (<div>
         <Myprofile mode={mode}>
             <div>김상원 1991년 7월 18일 생</div>
-            <div>모든 현상의 근원에 대해서 철학적으로 접근하는 개발자가 되고자 합니다.</div>
+            <div>홈페이지를 직접 꾸미고 만들고 시스템을 직접 설계하는 것을 좋아합니다.</div>
         </Myprofile>
         <Mainprofile mode={mode}>
             <div>
@@ -34,13 +34,15 @@ export const About = ({mode}) => {
                 <div>수원 리멤버 방탈출 카페 (퍼블리싱, 프론트엔드, 백엔드) (2020.5)</div>
                 <div>홈페이지 : <a target="_blank" href='http://rememberesc.com/'>http://rememberesc.com</a></div>
                 <div>생각솜씨 (국제 기억력 테스트 홈페이지) (퍼블리싱, 프론트엔드, 백엔드) (추가 개발 및 유지보수)</div>
-                <div>홈페이지 : <a target="_blank" href='http://15.165.13.245/'>http://15.165.13.245/</a></div>
+                <div>홈페이지 : <a target="_blank" href='http://15.165.13.245/'>http://15.165.13.245</a></div>
+                <div>로일스 컨설팅 (퍼블리싱) (2020.10)</div>
+                <div>홈페이지 : <a target="_blank" href='http://loyils.com/'>http://loyils.com/</a></div>
             </div>
         </Mainprofile>
         <Mainprofile mode={mode}>
             <div>
                 <p>주요 키워드</p>
-                <div>Html, Css, Javascript, Jquery, React, NodeJS, MongoDB, Git, AWS</div>
+                <div>Html, Css, Javascript, Jquery, React, NodeJS, MongoDB, Mysql, Git, AWS</div>
             </div>
         </Mainprofile>
         <Mainprofile mode={mode}>
