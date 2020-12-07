@@ -41,7 +41,6 @@ export const Mainprofile = styled.section`
     background: ${props => props.mode === 'development' ? `url('../images/aboutimage2.jpg') no-repeat 50% fixed;` : `url('https://raw.githubusercontent.com/ksw7581/kswWebsite/master/images/aboutimage2.jpg') no-repeat 50% 0 fixed;`};
     background-size: cover !important;
     padding: 60px 100px;
-            60px;
     color: white;
   }
 
@@ -54,6 +53,10 @@ export const Mainprofile = styled.section`
     font-size: 18px;
     font-weight: bold;
     margin: 4px;
+  }
+
+  ${this} > div > div {
+    margin : 5px 0;
   }
 
   ${this} > div > div > div {
