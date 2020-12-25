@@ -26,6 +26,9 @@ export const Nav = () => {
                 <Link to="/blogs">
                     <Li menuon={menuon} onClick={() => setMenuon(false)}>Blog</Li>
                 </Link>
+                <a href="http://2020mostlikedfeed.com">
+                    <Li menuon={menuon} onClick={() => setMenuon(false)}>2020MostLikedFeed</Li>
+                </a>
             </Ul>
         </nav>
         <Menuicon onClick={() => setMenuon(!menuon)}/>
