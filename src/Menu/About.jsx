@@ -17,7 +17,6 @@ export const About = ({mode}) => {
                 <div>CMES Application Team (자바스크립트 개발자) (2017.02 ~ 2018.01)</div>
                 <div>FM테크 풀스택 웹 개발자 (2018.05 ~ 2020.04)</div>
                 <div>(현) 다겸 풀스택 웹 개발자 (2020.08 ~ 현재)</div>
-                <div>(현) 생각솜씨 개발 총괄(ReactJS, Styled-Component, Github, Webcrawling)</div>
                 <div>(현) 김상원의 웹페이지 개발 총괄(ReactJS, Styled-Component, Firebase)</div>
             </div>
         </Mainprofile>
@@ -37,6 +36,7 @@ export const About = ({mode}) => {
                 <div>홈페이지 : <a target="_blank" href='http://15.165.13.245/'>http://15.165.13.245</a></div>
                 <div>로일스 컨설팅 (퍼블리싱) (2020.10)</div>
                 <div>홈페이지 : <a target="_blank" href='http://loyils.com/'>http://loyils.com/</a></div>
+                <div>2020mostlikedfeed (퍼블리싱, 프론트엔드, 백엔드) 한시적 서비스(2020.12.26 ~ 2021.01.01)</div>
             </div>
         </Mainprofile>
         <Mainprofile mode={mode}>
