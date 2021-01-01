@@ -18,7 +18,7 @@ export const Nav = () => {
                 </svg>
             </Link>
         </Logo>
-        <nav style={{display: 'relative',}}>
+        <nav style={{display: 'relative'}}>
             <Ul>
                 <Link to="/about">
                     <Li menuon={menuon} onClick={() => setMenuon(false)}>About Me</Li>
@@ -26,9 +26,6 @@ export const Nav = () => {
                 <Link to="/blogs">
                     <Li menuon={menuon} onClick={() => setMenuon(false)}>Blog</Li>
                 </Link>
-                <a href="http://2020mostlikedfeed.com">
-                    <Li menuon={menuon} onClick={() => setMenuon(false)}>2020MostLikedFeed</Li>
-                </a>
             </Ul>
         </nav>
         <Menuicon onClick={() => setMenuon(!menuon)}/>
