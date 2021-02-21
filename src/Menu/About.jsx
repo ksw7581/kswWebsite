@@ -32,11 +32,11 @@ export const About = ({mode}) => {
                 <div>홈페이지 : <a target="_blank" href='http://www.darockesc.com/'>http://www.darockesc.com</a></div>
                 <div>수원 리멤버 방탈출 카페 (퍼블리싱, 프론트엔드, 백엔드) (2020.5)</div>
                 <div>홈페이지 : <a target="_blank" href='http://rememberesc.com/'>http://rememberesc.com</a></div>
-                <div>생각솜씨 (국제 기억력 테스트 홈페이지) (퍼블리싱, 프론트엔드, 백엔드) (추가 개발 및 유지보수)</div>
-                <div>홈페이지 : <a target="_blank" href='http://15.165.13.245/'>http://15.165.13.245</a></div>
                 <div>로일스 컨설팅 (퍼블리싱) (2020.10)</div>
                 <div>홈페이지 : <a target="_blank" href='http://loyils.com/'>http://loyils.com/</a></div>
                 <div>2020mostlikedfeed (퍼블리싱, 프론트엔드, 백엔드) 한시적 서비스(2020.12.26 ~ 2021.01.01)</div>
+                <div>(주)한국 콘크리트 산업 (퍼블리싱, 프론트엔드) (2020.10)</div>
+                <div>홈페이지 : <a target="_blank" href='http://kcipc.co.kr/kcipc/'>http://kcipc.co.kr/kcipc/</a></div>
             </div>
         </Mainprofile>
         <Mainprofile mode={mode}>

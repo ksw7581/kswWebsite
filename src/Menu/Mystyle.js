@@ -57,6 +57,10 @@ export const Mainprofile = styled.section`
 
   ${this} > div > div {
     margin : 5px 0;
+    ${this} > a {
+      text-decoration: none;
+      color : white;
+    }
   }
 
   ${this} > div > div > div {
