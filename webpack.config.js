@@ -11,12 +11,7 @@ const config  = {
     devtool: mode === 'development' ? 'inline-source-map' : 'hidden-source-map',
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-        alias: {
-            '@api': path.resolve(__dirname, 'src/api'),
-            '@fonts' : path.resolve(__dirname, 'src/fonts'),
-            '@styles' : path.resolve(__dirname, 'src/styles'),
-            '@utils': path.resolve(__dirname, 'src/utils'),
-        },
+        alias: {},
     },
     entry: {
         app: './src/index',
@@ -109,3 +104,50 @@ if (mode === 'production' && config.plugins) {
 }
 
 module.exports = config;
+
+//
+// const path = require('path');
+//
+// module.exports = {
+//     name: 'kswwebsite',
+//     mode: 'production', //실 서비스 : production
+//     devtool: 'eval',
+//     devServer: {
+//         hot: true,
+//         inline: true,
+//         contentBase: path.join(__dirname,"src"),
+//         historyApiFallback: true,
+//     },
+//     resolve: {
+//         extensions: ['.js', '.jsx'],
+//     },
+//     entry: {
+//         app: ['babel-polyfill', './src/Index'],
+//     }, //입력
+//     module: {
+//         rules: [{
+//             test: /\.jsx?/,
+//             loader: 'babel-loader',
+//             options: {
+//                 presets: [
+//                     ['@babel/preset-env', {
+//                         targets: {
+//                             browsers: ['> 1% in KR']
+//                         },
+//                         debug: true,
+//                     }],
+//                     '@babel/preset-react',
+//                 ],
+//                 plugins: [
+//                     '@babel/plugin-proposal-class-properties',
+//                     'react-hot-loader/babel',
+//                 ]
+//             },
+//         }],
+//     },
+//     output: {
+//         path: path.join(__dirname, 'public/dist'),
+//         filename: 'main.js',
+//         publicPath: '/',
+//     },
+// }
