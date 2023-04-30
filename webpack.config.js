@@ -11,7 +11,9 @@ const config  = {
     devtool: mode === 'development' ? 'inline-source-map' : 'hidden-source-map',
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-        alias: {},
+        alias: {
+            '@styles' : path.resolve(__dirname, 'src/styles'),
+        },
     },
     entry: {
         app: './src/index',
@@ -66,12 +68,7 @@ const config  = {
         }),
         new webpack.EnvironmentPlugin({ NODE_ENV: mode === 'development' ? 'development' : 'production' }),
         new webpack.DefinePlugin({
-            'process.env.GOOGLE_CLIENT_ID': JSON.stringify('567865268334-rcdi6r5c4q9nd1gobm14l1fgekvut1nn.apps.googleusercontent.com'),
-            'process.env.KAKAO_REST_API_KEY' : JSON.stringify('005093da128287b4a5fcd995dcc88106'),
-            'process.env.KAKAO_CALLBACK_URL' : mode === 'development' ? JSON.stringify('http://localhost:8080/oauth') : JSON.stringify('https://mypill.co.kr/oauth'),
-            'process.env.NAVER_CLIENT_ID' : JSON.stringify('DZvVufHJdP8y88x58FiE'),
-            'process.env.NAVER_CLIENT_SECRET' : JSON.stringify('hoa4PM6Iyn'),
-            'process.env.NAVER_CALLBACK_URL' : JSON.stringify('http://localhost/naver_login/callback'),
+            // 'process.env.NAVER_CALLBACK_URL' : JSON.stringify('http://localhost/naver_login/callback'),
         }),
     ],
     output: {
@@ -104,50 +101,3 @@ if (mode === 'production' && config.plugins) {
 }
 
 module.exports = config;
-
-//
-// const path = require('path');
-//
-// module.exports = {
-//     name: 'kswwebsite',
-//     mode: 'production', //실 서비스 : production
-//     devtool: 'eval',
-//     devServer: {
-//         hot: true,
-//         inline: true,
-//         contentBase: path.join(__dirname,"src"),
-//         historyApiFallback: true,
-//     },
-//     resolve: {
-//         extensions: ['.js', '.jsx'],
-//     },
-//     entry: {
-//         app: ['babel-polyfill', './src/Index'],
-//     }, //입력
-//     module: {
-//         rules: [{
-//             test: /\.jsx?/,
-//             loader: 'babel-loader',
-//             options: {
-//                 presets: [
-//                     ['@babel/preset-env', {
-//                         targets: {
-//                             browsers: ['> 1% in KR']
-//                         },
-//                         debug: true,
-//                     }],
-//                     '@babel/preset-react',
-//                 ],
-//                 plugins: [
-//                     '@babel/plugin-proposal-class-properties',
-//                     'react-hot-loader/babel',
-//                 ]
-//             },
-//         }],
-//     },
-//     output: {
-//         path: path.join(__dirname, 'public/dist'),
-//         filename: 'main.js',
-//         publicPath: '/',
-//     },
-// }
