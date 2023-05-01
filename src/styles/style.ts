@@ -38,7 +38,7 @@ export const HeaderComponent = styled.header<{
         ${this} > a {
           text-decoration: none;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 700;
           font-size: 48px;
           line-height: 20px;
           align-items: center;
@@ -150,7 +150,7 @@ export const MainSection = styled.section<{
 `
 const sectionTitle = `
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 48px;
     line-height: 20px;
     color: #FFFFFF;

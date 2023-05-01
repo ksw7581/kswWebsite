@@ -3,51 +3,46 @@ import styled from '@emotion/styled';
 
 export const reset = css`
 
-  //@font-face {
-  //  font-family: 'Noto Sans KR';
-  //  font-style: normal;
-  //  font-weight: 100;
-  //  src: local('Noto Sans KR'),
-  //  url( /fonts/NotoSansKR-Thin.woff2) format('woff2');
-  //url( /fonts/NotoSansKR-Thin.woff) format('woff');
-  //url( /fonts/NotoSansKR-Thin.otf) format('otf');
-  //}
-  //
-  //@font-face {
-  //  font-family: 'Noto Sans KR';
-  //  font-style: normal;
-  //  font-weight: 300;
-  //  src: local('Noto Sans KR'),
-  //  url( /fonts/NotoSansKR-Regular.woff2) format('woff2');
-  //url( /fonts/NotoSansKR-Regular.woff) format('woff');
-  //url( /fonts/NotoSansKR-Regular.otf) format('otf');
-  //}
-  //
-  //@font-face {
-  //  font-family: 'Noto Sans KR';
-  //  font-style: normal;
-  //  font-weight: 500;
-  //  src: local('Noto Sans KR'),
-  //  url( /fonts/NotoSansKR-Medium.woff2) format('woff2');
-  //url( /fonts/NotoSansKR-Medium.woff) format('woff');
-  //url( /fonts/NotoSansKR-Medium.otf) format('otf');
-  //}
-  //
-  //@font-face {
-  //  font-family: 'Noto Sans KR';
-  //  font-style: normal;
-  //  font-weight: 700;
-  //  src: local('Noto Sans KR'),
-  //  url( /fonts/NotoSansKR-Bold.woff2) format('woff2');
-  //url( /fonts/NotoSansKR-Bold.woff) format('woff');
-  //url( /fonts/NotoSansKR-Bold.otf) format('otf');
-  //}
+  @font-face {
+    font-family: 'SF-Pro';
+    font-style: normal;
+    font-weight: 100;
+    src: local('SF-Pro'),
+  url( /src/fonts/SF-Pro-Display-Thin.otf) format('otf');
+  }
+
+  @font-face {
+    font-family: 'SF-Pro';
+    font-style: normal;
+    font-weight: 300;
+    src: local('SF-Pro'),
+    url( /src/fonts/SF-Pro-Display-Regular.otf) format('otf');
+  }
+
+  @font-face {
+    font-family: 'SF-Pro';
+    font-style: normal;
+    font-weight: 500;
+    src: local('SF-Pro'),
+    url( /src/fonts/SF-Pro-Display-Medium.otf) format('otf');
+  url( /fonts/NotoSansKR-Medium.woff) format('woff');
+  url( /fonts/NotoSansKR-Medium.otf) format('otf');
+  }
+
+  @font-face {
+    font-family: 'SF-Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: local('SF-Pro'),
+    url( /src/fonts/SF-Pro-Display-Bold.otf) format('otf');
+  }
 
   * {
     margin: 0;
     padding: 0;
     font-family: initial;
     font-style: normal;
+    font-weight: bold;
   }
 
   body {
