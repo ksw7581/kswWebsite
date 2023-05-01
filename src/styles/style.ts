@@ -39,7 +39,7 @@ export const HeaderComponent = styled.header<{
           text-decoration: none;
           font-style: normal;
           font-weight: 700;
-          font-size: 48px;
+          font-size: 28px;
           line-height: 20px;
           align-items: center;
           text-align: center;
