@@ -6,8 +6,8 @@ export const HeaderComponent = styled.header<{
   position: fixed;
   top: 0;
   height: 80px;
-  background : ${props => props.isScrolled ? '#FFFFFF' : '#161617'};
-  opacity : 0.7;
+  background: ${props => props.isScrolled ? '#FFFFFF' : '#161617'};
+  opacity: 0.7;
   z-index: 2;
   width: 100%;
   max-width: 1440px;
@@ -58,20 +58,45 @@ export const HeaderComponent = styled.header<{
 
 
 export const MainSection = styled.section<{
-    img: string,
+    slideIndex: number,
 }>`
   height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(${props => props.img});
   position: relative;
+  overflow: hidden;
 
-  ${this} > div {
+  ${this} > div:nth-of-type(1) {
     position: absolute;
-    bottom : 40px;
+    width: max-content;
+    display: flex;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+
+    ${this} > div {
+      width: 100%;
+      min-width: 1440px;
+      max-width: 1440px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      ${this} > img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  ${this} > div:nth-of-type(2) {
+    position: absolute;
+    bottom: 40px;
     left: 40px;
-    
+
     ${this} > div:nth-child(1) {
       margin-right: 10px;
     }
@@ -89,10 +114,29 @@ export const MainSection = styled.section<{
 
   }
 
+  ${this} > div:nth-of-type(3) {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    ${this} > div {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      margin: 5px 0;
+      cursor: pointer;
+      background-color: #CECECE;
+    }
+
+    ${this} > div:nth-child(${props => props.slideIndex + 1}) {
+      background-color: #FFFFFF;
+    }
+  }
+
 
   @media (max-width: 768px) {
     height: 470px;
-    background: url(${props => props.img}) no-repeat 50% 0%;
+    background: no-repeat 50% 0%;
     background-size: 100% 100%;
     ${this} > div {
       display: block;
