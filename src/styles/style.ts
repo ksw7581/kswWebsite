@@ -138,11 +138,28 @@ export const MainSection = styled.section<{
     height: 470px;
     background: no-repeat 50% 0%;
     background-size: 100% 100%;
-    ${this} > div {
-      display: block;
+    ${this} > div:nth-of-type(1) {
+
+    }
+
+    ${this} > div:nth-of-type(2) {
+      bottom: 20px;
+      left: 20px;
+      width: 60%;
 
       ${this} > div {
-        font-size: 36px;
+        font-size: 14px;
+      }
+    }
+
+    ${this} > div:nth-of-type(3) {
+      bottom: 20px;
+      right: 20px;
+
+      ${this} > div {
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
       }
     }
 
@@ -159,6 +176,18 @@ const sectionTitle = `
     height : 40px;
     margin-bottom : 20px;
 `
+
+const sectionTitleMobile = `
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 12px;
+  color: #FFFFFF;
+  border-bottom : 2px solid white;
+  width : fit-content;
+  height : 20px;
+  margin-bottom : 10px;
+`;
 
 export const CareerSection = styled.section`
   padding: 60px 40px;
@@ -211,7 +240,39 @@ export const CareerSection = styled.section`
     }
   }
 
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    ${this} > div:nth-of-type(1) {
+      ${sectionTitleMobile}
+    }
 
+    ${this} > div:nth-of-type(2) {
+      width: 100%;
+
+      ${this} > div {
+   
+        ${this} > div:nth-of-type(1) {
+          font-size: 16px;
+        }
+
+        ${this} > div:not(:nth-of-type(1)) {
+          display: flex;
+          margin-bottom: 5px;
+          font-size: 12px;
+
+          ${this} > div:nth-of-type(1) {
+            width: 40px;
+            margin-right: 20px;
+          }
+
+          ${this} > div:nth-of-type(2) {
+
+          }
+        }
+      }
+
+    }
+  }
 `;
 
 export const PortfolioSection = styled.section`
@@ -267,6 +328,27 @@ export const PortfolioSection = styled.section`
     }
 
   }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    ${this} > div:nth-of-type(1) {
+      ${sectionTitleMobile}
+    }
+
+    ${this} > div:nth-of-type(2) {
+      width: 100%;
+
+      ${this} > div:nth-of-type(1) {
+        display: block;
+
+        ${this} > div {
+          width: 100%;
+          margin-right : 0;
+          margin-bottom : 20px;
+        }
+      }
+    }
+  }
 `;
 
 export const SkillsSection = styled.section`
@@ -298,6 +380,27 @@ export const SkillsSection = styled.section`
 
         ${this} > img {
           width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    ${this} > div:nth-of-type(1) {
+      ${sectionTitleMobile}
+    }
+
+    ${this} > div:nth-of-type(2) {
+      width: 100%;
+
+      ${this} > div {
+        margin-bottom: 0;
+
+        ${this} > div {
+          width : 60px;
+          height : 60px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -348,6 +451,48 @@ export const Footer = styled.footer`
     ${this} > div {
       cursor: pointer;
       margin-right: 60px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    display: flex;
+
+    ${this} > div:nth-of-type(1) {
+      width: 60%;
+      position: relative;
+      top: auto;
+      left: auto;
+
+      ${this} > div:nth-of-type(2) {
+        ${this} > div {
+          font-size: 12px;
+        }
+      }
+    }
+
+    ${this} > div:nth-of-type(2) {
+      width: 40%;
+      display: flex;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+
+      ${this} > div {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        margin-right: 20px;
+
+        ${this} > svg {
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      ${this} > div:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 `;
