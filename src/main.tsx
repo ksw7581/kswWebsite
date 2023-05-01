@@ -2,10 +2,10 @@ import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {MainSection} from "@styles/style";
 
 const introImages = [
-    '/src/images/aboutimage4.jpg',
-    '/src/images/aboutimage.jpg',
-    '/src/images/aboutimage3.jpg',
-    '/src/images/aboutimage5.jpg',
+    'https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/aboutimage4.jpg',
+    'https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/aboutimage.jpg',
+    'https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/aboutimage3.jpg',
+    'https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/aboutimage5.jpg',
 ]
 
 const Main = () => {

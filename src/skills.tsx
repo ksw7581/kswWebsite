@@ -11,7 +11,7 @@ const Skills = () => {
                     {
                         Object.entries(value).map(([key2, value2], index2) => {
                             return <div key={index2} onClick={() => {window.open(value2.url, 'blank')}}>
-                                <img src={`/src/images/skills/${key2}.png`} alt={key2}/>
+                                <img src={`https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/skills/${key2}.png`} alt={key2}/>
                             </div>
                         })
                     }
