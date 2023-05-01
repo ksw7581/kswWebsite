@@ -3,7 +3,7 @@ import {PortfolioSection} from "@styles/style";
 import {MyPortfolios} from "./const";
 
 const Portfolio = () => {
-    return <PortfolioSection>
+    return <PortfolioSection id={'Portfolio'}>
         <div>Portfolio</div>
         <div>
             <div>
@@ -13,7 +13,9 @@ const Portfolio = () => {
                             <div>
                                 <img src={item.logo} alt={item.title}/>
                             </div>
-                            <div>{item.introImage}</div>
+                            <div>
+                                <img src={item.introImage} alt={item.introImage}/>
+                            </div>
                             <div>{item.title}</div>
                             <div>{item.contents}</div>
                         </div>

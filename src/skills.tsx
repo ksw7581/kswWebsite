@@ -3,7 +3,7 @@ import {SkillsSection} from "@styles/style";
 import {MySkills} from "./const";
 
 const Skills = () => {
-    return <SkillsSection>
+    return <SkillsSection id={'Skills'}>
         <div>Skills</div>
         <div>{
             Object.entries(MySkills).map(([key, value], index) => {

@@ -1,9 +1,16 @@
 import styled from '@emotion/styled';
 
-export const HeaderComponent = styled.header`
+export const HeaderComponent = styled.header<{
+    isScrolled: boolean,
+}>`
+  position: fixed;
+  top: 0;
   height: 80px;
-  background: #161617;
-  position: relative;
+  background : ${props => props.isScrolled ? '#FFFFFF' : '#161617'};
+  opacity : 0.7;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
 
   ${this} > div:nth-of-type(1) {
     position: absolute;
@@ -36,7 +43,7 @@ export const HeaderComponent = styled.header`
           line-height: 20px;
           align-items: center;
           text-align: center;
-          color: #FFFFFF;
+          color: ${props => props.isScrolled ? '#161617' : '#FFFFFF'};
         }
       }
     }
@@ -58,10 +65,13 @@ export const MainSection = styled.section<{
   align-items: center;
   justify-content: center;
   background-image: url(${props => props.img});
+  position: relative;
 
   ${this} > div {
-    display: flex;
-
+    position: absolute;
+    bottom : 40px;
+    left: 40px;
+    
     ${this} > div:nth-child(1) {
       margin-right: 10px;
     }
@@ -71,9 +81,10 @@ export const MainSection = styled.section<{
       text-align: center;
       font-family: 'Roboto';
       font-style: normal;
-      font-weight: 900;
-      font-size: 56px;
+      font-weight: 300;
+      font-size: 24px;
       color: white;
+      text-align: left;
     }
 
   }
@@ -145,7 +156,7 @@ export const CareerSection = styled.section`
         font-size: 18px;
 
         ${this} > div:nth-of-type(1) {
-          width : 40px;
+          width: 40px;
           margin-right: 20px;
         }
 
@@ -239,7 +250,7 @@ export const SkillsSection = styled.section`
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        cursor : pointer;
+        cursor: pointer;
 
         ${this} > img {
           width: 100%;
@@ -263,7 +274,7 @@ export const Footer = styled.footer`
 
     ${this} > div:nth-of-type(1) {
       width: 50px;
-      margin-right : 10px;
+      margin-right: 10px;
 
       ${this} > img {
         width: 100%;
@@ -271,11 +282,11 @@ export const Footer = styled.footer`
     }
 
     ${this} > div:nth-of-type(2) {
-      color : white;
-      padding-top : 5px;
-      
+      color: white;
+      padding-top: 5px;
+
       ${this} > div:nth-of-type(1) {
-        margin-bottom : 5px;
+        margin-bottom: 5px;
       }
 
       ${this} > div:nth-of-type(2) {
@@ -285,13 +296,14 @@ export const Footer = styled.footer`
 
   ${this} > div:nth-of-type(2) {
     display: flex;
-    width : 600px;
-    margin : 0 auto;
-    align-items : center;
+    width: 600px;
+    margin: 0 auto;
+    align-items: center;
     justify-content: center;
+
     ${this} > div {
-      cursor : pointer;
-      margin-right : 60px;
+      cursor: pointer;
+      margin-right: 60px;
     }
   }
 `;

@@ -3,7 +3,7 @@ import {CareerSection} from "@styles/style";
 import {MyCareer} from "./const";
 
 const Career = () => {
-    return <CareerSection>
+    return <CareerSection id={'Career'}>
         <div>Career</div>
         <div>{
             Object.entries(MyCareer).reverse().map(([key, value], index) => {
