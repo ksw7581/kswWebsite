@@ -160,16 +160,57 @@ export const CareerSection = styled.section`
 `;
 
 export const PortfolioSection = styled.section`
-  padding : 60px 40px;
+  padding: 60px 40px;
   box-sizing: border-box;
   background: #000000;
-  
+
   ${this} > div:nth-of-type(1) {
     ${sectionTitle}
   }
-  
+
   ${this} > div:nth-of-type(2) {
-    
+    ${this} > div:nth-of-type(1) {
+      display: flex;
+
+      ${this} > div {
+        background: white;
+        margin-right: 20px;
+        width: calc(33% - 13.333px);
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        cursor: pointer;
+
+        ${this} > div:nth-of-type(1) {
+          margin-bottom: 10px;
+        }
+
+        ${this} > div:nth-of-type(2) {
+          margin-bottom: 10px;
+
+          ${this} > img {
+            width: 100%;
+          }
+        }
+
+        ${this} > div:nth-of-type(3) {
+          margin-bottom: 10px;
+          font-size: 24px;
+          font-weight: bold;
+        }
+
+        ${this} > div:nth-of-type(4) {
+          font-size: 18px;
+          font-weight: 300;
+        }
+      }
+
+      ${this} > div:nth-of-type(3n - 3) {
+        margin-right: 0;
+      }
+
+    }
+
   }
 `;
 
@@ -211,12 +252,46 @@ export const SkillsSection = styled.section`
 export const Footer = styled.footer`
   padding: 60px 40px;
   box-sizing: border-box;
+  background: #161617;
+  position: relative;
 
   ${this} > div:nth-of-type(1) {
-    
+    position: absolute;
+    top: 75px;
+    left: 40px;
+    display: flex;
+
+    ${this} > div:nth-of-type(1) {
+      width: 50px;
+      margin-right : 10px;
+
+      ${this} > img {
+        width: 100%;
+      }
+    }
+
+    ${this} > div:nth-of-type(2) {
+      color : white;
+      padding-top : 5px;
+      
+      ${this} > div:nth-of-type(1) {
+        margin-bottom : 5px;
+      }
+
+      ${this} > div:nth-of-type(2) {
+      }
+    }
   }
 
   ${this} > div:nth-of-type(2) {
-    
+    display: flex;
+    width : 600px;
+    margin : 0 auto;
+    align-items : center;
+    justify-content: center;
+    ${this} > div {
+      cursor : pointer;
+      margin-right : 60px;
+    }
   }
 `;

@@ -39,7 +39,27 @@ export const MyCareer: {
     },
 }
 
-export const MyPortfolios = {}
+export const MyPortfolios = {
+    mainProjects : [{
+        title : '마이필',
+        logo : 'https://www.mypill.co.kr/images/MYPILL_logo.png',
+        introImage : '',
+        contents : '나에게 맞는 영양제 그리고 내게 필요한 영양소를 간단한 자가진단과 건강검진 자료를 통해서 파악할 수 있는 홈페이지입니다.',
+        url : 'https://www.mypill.co.kr/'
+    },{
+        title : '미스터씨이오',
+        logo : 'https://www.mrceo.co.kr/src/images/logo.png',
+        introImage : '',
+        contents : '병의원 재무상태표 및 손익분석표 데이터와 홈택스 여신협회 신용카드 계좌이체 내역만으로 손익분석을 비교 대조 가능하게 해주는 서비스입니다. ',
+        url : 'https://www.mrceo.co.kr/'
+    },{
+        title : 'VInterview',
+        logo : 'https://www.ozic.com/static/media/icon_logo_pu.fd1194c5.svg',
+        introImage : '',
+        contents : '사용자의 직무와 학력 수상경력 등의 이력정보를 바탕으로 지원하고자 하는 기업의 예상 면접 질문을 받아볼 수 있는 플랫폼입니다.',
+        url : 'https://www.ozic.com/vinterview'
+    }]
+}
 
 export const MySkills: {
     editor: {
@@ -128,7 +148,7 @@ export const MySkills: {
         multer: {
             url: 'https://github.com/expressjs/multer#readme',
         },
-        'aws-s3': {
+        awsS3: {
             url: 'https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-s3',
         },
         passport: {
