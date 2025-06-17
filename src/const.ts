@@ -5,11 +5,13 @@ export const MyCareer: {
 } = {
   '2025': {
     '5': ['다겸 퇴사'],
+    '3': ['다겸 포트폴리오 홈페이지 런칭'],
   },
   "2024": {
     "9": ["의류 쇼핑몰 앱 소코드레스 서비스 런칭"],
   },
   "2023": {
+    "12": ["Triptime 서비스런칭"],
     "9": ["소개팅 어플리케이션 더핏럽 서비스 런칭"],
     "4": ["마이필 서비스 런칭"],
     "2": ["소코드레스 앱 IOS 심사 통과 앱 배포"]
@@ -49,22 +51,22 @@ export const MyCareer: {
 export const MyPortfolios = {
   mainProjects: [{
     title: "마이필",
-    logo: "https://www.mypill.co.kr/images/MYPILL_logo.png",
+    logo: "https://mypill.io/images/MYPILL_logo.png",
     introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/mrceoIntro.png`,
     contents: "나에게 맞는 영양제 그리고 내게 필요한 영양소를 간단한 자가진단과 건강검진 자료를 통해서 파악할 수 있는 홈페이지입니다.",
-    url: "https://www.mypill.co.kr/"
+    url: "https://mypill.io/"
   }, {
     title: "미스터씨이오",
-    logo: "https://www.mrceo.co.kr/src/images/logo.png",
+    logo: "https://www.mrceo.kr/src/images/logo.png",
     introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/mypillIntro.png`,
     contents: "병의원 재무상태표 및 손익분석표 데이터와 홈택스 여신협회 신용카드 계좌이체 내역만으로 손익분석을 비교 대조 가능하게 해주는 서비스입니다. ",
-    url: "https://www.mrceo.co.kr/"
+    url: "https://www.mrceo.kr/"
   }, {
-    title: "VInterview",
-    logo: "https://www.ozic.com/static/media/icon_logo_pu.fd1194c5.svg",
-    introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/VInterviewIntro.png`,
-    contents: "사용자의 직무와 학력 수상경력 등의 이력정보를 바탕으로 지원하고자 하는 기업의 예상 면접 질문을 받아볼 수 있는 플랫폼입니다.",
-    url: "https://www.ozic.com/vinterview"
+    title: "TripTime",
+    logo: "https://triptime.me/static/image/logo_colored.png",
+    introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/triptimeIntro.png`,
+    contents: "여행지 호텔과 어트랙션 그리고 여행사 제공 투어를 제작하는 서비스입니다.",
+    url: "https://triptime.me/"
   }]
 };
 
