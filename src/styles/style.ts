@@ -289,6 +289,7 @@ export const PortfolioSection = styled.section`
       display: inline-block;
 
       ${this} > div {
+        height: 493px;
         display: inline-block;
         background: white;
         margin-right: 20px;
@@ -302,6 +303,7 @@ export const PortfolioSection = styled.section`
 
         ${this} > div:nth-of-type(1) {
           margin-bottom: 10px;
+
           ${this} > img {
             max-width: 120px;
           }
@@ -309,9 +311,14 @@ export const PortfolioSection = styled.section`
 
         ${this} > div:nth-of-type(2) {
           margin-bottom: 10px;
+          height: 300px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           ${this} > img {
-            width: 100%;
+            height: 100%;
           }
         }
 
@@ -349,8 +356,8 @@ export const PortfolioSection = styled.section`
 
         ${this} > div {
           width: 100%;
-          margin-right : 0;
-          margin-bottom : 20px;
+          margin-right: 0;
+          margin-bottom: 20px;
         }
       }
     }

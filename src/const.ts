@@ -53,7 +53,7 @@ export const MyPortfolios = {
     title: "Moyvle",
     logo: "https://moyvle.com/assets/img/moyvle-logo.png",
     introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/moyvle_intro.png`,
-    contents: "동대문 의류, 화장품 해외(미국) 도매 및 배송 플랫폼",
+    contents: "동대문 의류, 화장품 해외(미국) 도매 및 배송 플랫폼입니다. 6000개 이상의 의류 데이터를 보관하고 있고 결제 배송 프로세스까지 구성이 되어습니다.",
     url: "https://moyvle.com/"
   }, {
     title: "다겸 포트폴리오",
