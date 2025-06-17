@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require("express");
 const path = require("path");
 const dotenv = require("dotenv");
@@ -6,15 +7,18 @@ const PORT = 80;
 dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname), {
+  index: false,
+}));
 
 app.get("*", function(req: any, res: { sendFile: (arg0: any) => void }, next: any) {
   const mode = process.env.mode;
-  console.log(mode);
+  const devPath = path.join(__dirname, "dev.html");
+  const indexPath = path.join(__dirname, "index.html");
   if (mode === "development") {
-    res.sendFile(path.join(__dirname, "index.dev.html"));
+    res.sendFile(devPath);
   } else {
-    res.sendFile(path.join(__dirname, "index.prod.html"));
+    res.sendFile(indexPath);
   }
 });
 
