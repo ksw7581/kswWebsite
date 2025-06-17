@@ -302,6 +302,9 @@ export const PortfolioSection = styled.section`
 
         ${this} > div:nth-of-type(1) {
           margin-bottom: 10px;
+          ${this} > img {
+            max-width: 120px;
+          }
         }
 
         ${this} > div:nth-of-type(2) {

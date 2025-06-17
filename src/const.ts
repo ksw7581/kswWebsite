@@ -58,12 +58,12 @@ export const MyPortfolios = {
   }, {
     title: "다겸 포트폴리오",
     logo: "https://dagyeom.s3.ap-northeast-2.amazonaws.com/dagyeom_logo.png",
-    introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/dagyeom_portfolio`,
+    introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/dagyeom_portfolio.png`,
     contents: "다겸 솔루션 소개페이지 및 포트폴리오를 정리해놓은 홈페이지입니다.",
     url: "https://dagyeom-devsvc.com/"
   }, {
     title: "TheFitLove",
-    logo: "https://thefitlove.co.kr/src/img/logo.png",
+    logo: "https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/thefitlove_logo.png",
     introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/thefitlove_intro.png`,
     contents: "온라인 소개팅 플랫폼 더핏럽의 MVP 1.0 버전을 개발해서 2024년 4월까지 개발 운영 및 유지보수를 맡았습니다.",
     url: "https://thefitlove.co.kr/"
