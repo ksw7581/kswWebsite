@@ -286,13 +286,16 @@ export const PortfolioSection = styled.section`
 
   ${this} > div:nth-of-type(2) {
     ${this} > div:nth-of-type(1) {
-      display: flex;
+      display: inline-block;
 
       ${this} > div {
+        display: inline-block;
         background: white;
         margin-right: 20px;
+        vertical-align: text-top;
         width: calc(33% - 13.333px);
         padding: 20px;
+        margin-bottom: 20px;
         box-sizing: border-box;
         border-radius: 20px;
         cursor: pointer;
