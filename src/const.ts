@@ -143,7 +143,13 @@ export const MySkills: {
     },
     webpack: {
       url: "https://webpack.kr/"
-    }
+    },
+    react_native : {
+      url: "https://reactnative.dev"
+    },
+    tailwind_css : {
+      url: "https://tailwindcss.com/"
+    },
   },
   nodejs: {
     express: {
@@ -151,6 +157,9 @@ export const MySkills: {
     },
     sequelize: {
       url: "https://sequelize.org/"
+    },
+    prisma : {
+      url: "https://www.prisma.io/"
     },
     multer: {
       url: "https://github.com/expressjs/multer#readme"
@@ -166,7 +175,10 @@ export const MySkills: {
     },
     nodemailer: {
       url: "https://nodemailer.com/about/"
-    }
+    },
+    nest_js: {
+      url: "https://nestjs.com/"
+    },
   },
   databases: {
     mysql: {
@@ -174,6 +186,9 @@ export const MySkills: {
     },
     mongodb: {
       url: "https://www.mongodb.com/"
-    }
+    },
+    postgre_sql: {
+      url: "https://www.postgresql.org/"
+    },
   }
 };

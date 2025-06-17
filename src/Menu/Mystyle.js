@@ -10,13 +10,13 @@ export const Myprofile = styled.section`
   background: ${props => props.mode === 'development' ? `url('/images/mainImage.jpg') no-repeat 50% 0 fixed;` : `url('https://raw.githubusercontent.com/ksw7581/kswWebsite/master/images/mainImage.jpg') no-repeat 50% 0 fixed;`};
   background-size: 100vw;
 
-  ${this} > div:nth-child(1) {
+  ${this} > div:nth-of-type(1) {
     font-size: 24px;
     font-weight: bold;
     margin: auto 10px;
   }
 
-  ${this} > div:nth-child(2) {
+  ${this} > div:nth-of-type(2) {
     font-size: 12px;
     font-weight: bold;
     margin: auto 10px;
@@ -37,7 +37,7 @@ export const Mainprofile = styled.section`
   background-size: cover;
   background-attachment: scroll;
 
-  ${this} > div:nth-child(1) {
+  ${this} > div:nth-of-type(1) {
     background: ${props => props.mode === 'development' ? `url('../images/aboutimage2.jpg') no-repeat 50% fixed;` : `url('https://raw.githubusercontent.com/ksw7581/kswWebsite/master/images/aboutimage2.jpg') no-repeat 50% 0 fixed;`};
     background-size: cover !important;
     padding: 60px 100px;
@@ -92,14 +92,14 @@ export const BlogWrapper = styled.div`
     }
 
 
-    ${this} > div:nth-child(1) {
+    ${this} > div:nth-of-type(1) {
       height: 250px;
       ${media.lessThan("medium")`
                 height : 100%;
             `}
     }
 
-    ${this} > div:nth-child(1) > a > img {
+    ${this} > div:nth-of-type(1) > a > img {
       margin: 3px;
       width: calc(100% - 6px);
       height: calc(100% - 6px);
@@ -107,7 +107,7 @@ export const BlogWrapper = styled.div`
 
     }
 
-    ${this} > div:nth-child(2) > a > div {
+    ${this} > div:nth-of-type(2) > a > div {
       font-size: 24px;
       font-weight: 600;
       overflow: hidden;
@@ -133,7 +133,7 @@ export const BlogCtntWrapper = styled.div`
   width: calc(100% - 40px);
   background-color: #ecf0f1;
 
-  ${this} > div:nth-child(1) > div {
+  ${this} > div:nth-of-type(1) > div {
     margin: 10px 50px;
     width: calc(100% - 100px);
     font-size: 32px;
@@ -150,7 +150,7 @@ export const BlogCtntWrapper = styled.div`
         `}
   }
 
-  ${this} > div:nth-child(2) > img {
+  ${this} > div:nth-of-type(2) > img {
     margin: 15px 50px;
     width: calc(100% - 100px);
     ${media.lessThan("medium")`
@@ -159,7 +159,7 @@ export const BlogCtntWrapper = styled.div`
         `}
   }
 
-  ${this} > div:nth-child(3) > div {
+  ${this} > div:nth-of-type(3) > div {
     margin: 10px 50px;
     width: calc(100% - 100px);
     font-size: 18px;

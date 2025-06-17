@@ -97,7 +97,7 @@ export const MainSection = styled.section<{
     bottom: 40px;
     left: 40px;
 
-    ${this} > div:nth-child(1) {
+    ${this} > div:nth-of-type(1) {
       margin-right: 10px;
     }
 
@@ -128,7 +128,7 @@ export const MainSection = styled.section<{
       background-color: #CECECE;
     }
 
-    ${this} > div:nth-child(${props => props.slideIndex + 1}) {
+    ${this} > div:nth-of-type(${props => props.slideIndex + 1}) {
       background-color: #FFFFFF;
     }
   }
