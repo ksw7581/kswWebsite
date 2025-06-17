@@ -9,7 +9,7 @@ const footer = () => {
                 <img src={'https://yt3.googleusercontent.com/ytc/AGIKgqMxDVi0Qw4sNfz9te4eDBBRXnugZzzlefHIZoE2-A=s176-c-k-c0x00ffffff-no-rj'} alt={'logo'}/>
             </div>
             <div>
-                <div>2023 All Rights Reserved. James Kim</div>
+                <div>2023-2025 All Rights Reserved. James Kim</div>
                 <div>Email : ksw75811@gmail.com</div>
             </div>
         </div>

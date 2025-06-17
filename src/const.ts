@@ -82,7 +82,7 @@ export const MyPortfolios = {
   }, {
     title: "TripTime",
     logo: "https://triptime.me/static/image/logo_colored.png",
-    introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/triptimeIntro.png`,
+    introImage: `https://raw.githubusercontent.com/ksw7581/kswWebsite/master/src/images/triptime_logo.png`,
     contents: "여행지 호텔과 어트랙션 그리고 여행사 제공 투어를 제작하는 서비스입니다.",
     url: "https://triptime.me/"
   }]
