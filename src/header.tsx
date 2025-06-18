@@ -2,10 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { HeaderComponent } from "@styles/style";
 import { Link } from "react-router-dom";
 
-const mode = process.env.mode;
-
 const Header = () => {
-  console.log("mode : ", mode);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
