@@ -69,9 +69,9 @@ const config = {
       async: false
     }),
     new webpack.EnvironmentPlugin({ NODE_ENV: mode === "development" ? "development" : "production" }),
-    new webpack.DefinePlugin({
-      'process.env.mode': JSON.stringify(mode),
-    }),
+    // new webpack.DefinePlugin({
+    //   'process.env.mode': JSON.stringify(mode),
+    // }),
   ],
   output: {
     path: path.join(__dirname, "public/dist"),
