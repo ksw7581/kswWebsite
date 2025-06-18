@@ -9,17 +9,20 @@ import { Route, Routes } from "react-router";
 import Blog from "./blog";
 
 const App = () => {
-  return <Routes>
-    <Route path={"/"} element={<>
-      <Header />
-      <Main />
-      <Career />
-      <Portfolio />
-      <Skills />
-      <Footer />
-    </>} />
-    <Route path={"/blog"} element={<Blog />} />
-  </Routes>;
+  // return <Routes>
+  //   <Route path={"/"} element={<>
+  //
+  //   </>} />
+  //   <Route path={"/blog"} element={<Blog />} />
+  // </Routes>;
+  return <>
+    <Header />
+    <Main />
+    <Career />
+    <Portfolio />
+    <Skills />
+    <Footer />
+  </>
 };
 
 export default App;
