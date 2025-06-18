@@ -9,20 +9,20 @@ import { Route, Routes } from "react-router";
 import Blog from "./blog";
 
 const App = () => {
-  // return <Routes>
-  //   <Route path={"/"} element={<>
-  //
-  //   </>} />
-  //   <Route path={"/blog"} element={<Blog />} />
-  // </Routes>;
-  return <>
-    <Header />
-    <Main />
-    <Career />
-    <Portfolio />
-    <Skills />
-    <Footer />
-  </>
+  return <Routes>
+    <Route path={"/"} element={<>
+      <Header />
+      <Main />
+      <Career />
+      <Portfolio />
+      <Skills />
+      <Footer />
+    </>} />
+    <Route path={"/blog"} element={<Blog />} />
+    <Route path={"/kswWebsite"} element={<>
+      <div>React Router Dom 테스트</div>
+    </>} />
+  </Routes>;
 };
 
 export default App;
