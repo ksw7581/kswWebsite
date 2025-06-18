@@ -8,19 +8,19 @@ import Footer from "./footer";
 import { Route, Routes } from "react-router";
 import Blog from "./blog";
 
+export const defaultUrlPrefix: "/kswWebsite" = "/kswWebsite";
+
 const App = () => {
   return <Routes>
-    <Route path={"/"} element={<>
+    <Route path={"/"} element={<></>} />
+    {/*<Route path={defaultUrlPrefix + '/blog'} element={<Blog />} />*/}
+    <Route path={defaultUrlPrefix} element={<>
       <Header />
       <Main />
       <Career />
       <Portfolio />
       <Skills />
       <Footer />
-    </>} />
-    <Route path={"/blog"} element={<Blog />} />
-    <Route path={"/kswWebsite"} element={<>
-      <div>React Router Dom 테스트</div>
     </>} />
   </Routes>;
 };

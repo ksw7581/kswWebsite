@@ -2,7 +2,10 @@ import React, { useState, useEffect, useCallback } from "react";
 import { HeaderComponent } from "@styles/style";
 import { Link } from "react-router-dom";
 
+const mode = process.env.mode;
+
 const Header = () => {
+  console.log("mode : ", mode);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -37,7 +40,7 @@ const Header = () => {
         <ul onClick={() => moveScroll(1)}><a>Career</a></ul>
         <ul onClick={() => moveScroll(2)}><a>Portfolio</a></ul>
         <ul onClick={() => moveScroll(3)}><a>Skills</a></ul>
-        {/*<ul><Link to={"/blog"}>Blog</Link></ul>*/}
+        {/*<ul><Link to={'/blog'}>Blog</Link></ul>*/}
       </li>
     </div>
   </HeaderComponent>;
