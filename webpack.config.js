@@ -3,7 +3,9 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const webpack = require("webpack");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const WebpackBundleAnalyzer = require("webpack-bundle-analyzer");
-const mode = "development";
+const dotenv = require('dotenv');
+dotenv.config();
+const mode = process.env.mode;
 
 const config = {
   name: "KSWWebsite",
@@ -66,7 +68,10 @@ const config = {
     new ForkTsCheckerWebpackPlugin({
       async: false
     }),
-    new webpack.EnvironmentPlugin({ NODE_ENV: mode === "development" ? "development" : "production" })
+    new webpack.EnvironmentPlugin({ NODE_ENV: mode === "development" ? "development" : "production" }),
+    new webpack.DefinePlugin({
+      'process.env.mode': JSON.stringify(mode),
+    }),
   ],
   output: {
     path: path.join(__dirname, "public/dist"),
