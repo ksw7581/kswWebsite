@@ -37,7 +37,7 @@ const Header = () => {
         <ul onClick={() => moveScroll(1)}><a>Career</a></ul>
         <ul onClick={() => moveScroll(2)}><a>Portfolio</a></ul>
         <ul onClick={() => moveScroll(3)}><a>Skills</a></ul>
-        <ul><Link to={"/blog"}>Blog</Link></ul>
+        {/*<ul><Link to={"/blog"}>Blog</Link></ul>*/}
       </li>
     </div>
   </HeaderComponent>;
